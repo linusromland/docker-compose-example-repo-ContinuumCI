@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    client:
+        image: client
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        volumes:
+            - /app/node_modules
+            - ./client:/app
+        ports:
+            - 3000:3000
